@@ -1,0 +1,54 @@
+html, body, #root {
+  margin: 0;
+  height: 100%;
+  background: #050505;
+  font-family: Arial;
+}
+
+.app {
+  height: 100%;
+}
+
+.map {
+  height: 100%;
+  width: 100%;
+}
+
+.hud {
+  position: absolute;
+  z-index: 1000;
+  width: calc(100% - 30px);
+  padding: 15px;
+}
+
+h1 {
+  color: red;
+  text-align: center;
+}
+
+.card {
+  background: rgba(0,0,0,0.85);
+  color: white;
+  padding: 15px;
+  border-radius: 15px;
+  text-align: center;
+  margin-bottom: 10px;
+  border: 1px solid red;
+}
+
+button {
+  width: 100%;
+  padding: 15px;
+  border: none;
+  border-radius: 15px;
+  font-weight: bold;
+  color: white;
+}
+
+.start {
+  background: green;
+}
+
+.stop {
+  background: red;
+}
