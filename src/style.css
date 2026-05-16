@@ -2,7 +2,11 @@ html, body, #root {
   margin: 0;
   height: 100%;
   background: #050505;
-  font-family: Arial;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
 }
 
 .app {
@@ -17,38 +21,96 @@ html, body, #root {
 .hud {
   position: absolute;
   z-index: 1000;
-  width: calc(100% - 30px);
-  padding: 15px;
+  width: min(420px, calc(100% - 20px));
+  margin: 10px;
 }
 
 h1 {
-  color: red;
+  color: #ff2b2b;
   text-align: center;
+  background: rgba(0,0,0,0.85);
+  padding: 12px;
+  border-radius: 18px;
+  border: 1px solid #ff2b2b;
+  letter-spacing: 2px;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+}
+
+.card,
+.history,
+.controls {
+  background: rgba(0,0,0,0.85);
+  color: white;
+  border-radius: 18px;
+  border: 1px solid #ff2b2b;
 }
 
 .card {
-  background: rgba(0,0,0,0.85);
-  color: white;
-  padding: 15px;
-  border-radius: 15px;
-  text-align: center;
-  margin-bottom: 10px;
-  border: 1px solid red;
+  padding: 14px;
+  display: flex;
+  flex-direction: column;
 }
 
+.card span {
+  font-size: 12px;
+  opacity: 0.7;
+}
+
+.card strong {
+  margin-top: 6px;
+  font-size: 20px;
+}
+
+.controls {
+  margin-top: 10px;
+  padding: 10px;
+}
+
+select,
 button {
   width: 100%;
-  padding: 15px;
+  padding: 14px;
   border: none;
-  border-radius: 15px;
+  border-radius: 14px;
   font-weight: bold;
   color: white;
 }
 
+select {
+  margin-bottom: 10px;
+  background: #1d1d1d;
+}
+
 .start {
-  background: green;
+  background: linear-gradient(90deg, #00a83a, #00d54a);
 }
 
 .stop {
-  background: red;
+  background: linear-gradient(90deg, #b80000, #ff2020);
+}
+
+.history {
+  margin-top: 10px;
+  padding: 14px;
+}
+
+.history h2 {
+  margin-top: 0;
+  font-size: 16px;
+}
+
+.history-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 8px 0;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+.history-item:last-child {
+  border-bottom: none;
 }
